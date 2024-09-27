@@ -1,0 +1,52 @@
+.defaultButton {
+  padding: 0.9rem 2rem;
+  z-index: 30;
+  border: 2px solid white;
+  background-color: var(--grey-blue);
+  border-radius: 0.375rem;
+  color: white;
+  font-weight: 600;
+  position: relative;
+  font-size: 1.4rem;
+  text-shadow: 3px 5px 2px var(--raspberry);
+  transition: all 0.6s;
+  overflow: hidden;
+}
+
+.defaultButton:hover {
+  text-shadow: 2px 2px 2px var(--pink);
+}
+
+.defaultButton::after {
+  content: "";
+  position: absolute;
+  height: 0.25rem;
+  width: 0.25rem;
+  background-color: var(--midnight);
+  left: 1.25rem;
+  bottom: 0;
+  transform: translateY(100%);
+  border-radius: 0.375rem;
+  z-index: -20;
+  transition: all 0.6s;
+}
+
+.defaultButton:hover::after {
+  transform: scale(300);
+}
+
+/* Styles for laptops (min-width: 1096px) */
+@media (min-width: 1096px) {
+  .defaultButton {
+    padding: 1rem 2.2rem;
+    font-size: 1.65rem;
+  }
+}
+
+/* Styles for phones (max-width: 768px) */
+@media (max-width: 768px) {
+  .defaultButton {
+    padding: 0.75rem 1.45rem;
+    font-size: 1.15rem;
+  }
+}

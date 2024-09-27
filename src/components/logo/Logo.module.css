@@ -1,0 +1,17 @@
+.logo {
+  width: 9rem;
+}
+
+/* Styles for laptops (min-width: 1096px) */
+@media (min-width: 1096px) {
+  .logo {
+    width: 12rem;
+  }
+}
+
+/* Styles for phones (max-width: 768px) */
+@media (max-width: 768px) {
+  .logo {
+    width: 6rem;
+  }
+}

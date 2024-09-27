@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  background-color: var(--midnight);
+}
+
+.logo {
+  width: 10rem;
+}
+
+.navList {
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* Styles for laptops (min-width: 1096px) */
+@media (min-width: 1096px) {
+  .header {
+    padding: 2rem 4rem;
+  }
+
+  .navList {
+    font-size: 1.6rem;
+    gap: 3rem;
+  }
+}
+
+/* Styles for phones (max-width: 768px) */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 1.5rem;
+  }
+
+  .navList {
+    font-size: 1.2rem;
+    gap: 1.5rem;
+  }
+
+  .logo {
+    width: 6rem;
+  }
+}
