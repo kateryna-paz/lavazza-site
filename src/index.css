@@ -14,3 +14,9 @@
   --gold: theme("colors.gold");
   --light-green: theme("colors.light-green");
 }
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}

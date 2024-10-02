@@ -1,0 +1,90 @@
+.background {
+  background: linear-gradient(to right, #f2f7ff, rgba(255, 255, 255, 0.1)),
+    url(/images/background3.jpg) no-repeat top fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+
+  color: var(--midnight);
+}
+
+.gridContent {
+  margin: 280px 50px 50px 70px;
+  display: grid;
+  width: 80%;
+  grid-template-columns: auto;
+}
+
+.gridCol1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.gridCol1 h1 {
+  font-size: 5.5rem;
+  font-weight: 900;
+  line-height: normal;
+  margin-right: 300px;
+  text-shadow: 12px 10px 15px #d8e6ff;
+}
+
+.gridCol1 h3 {
+  font-size: 2.5rem;
+  margin-top: 30px;
+  font-weight: 500;
+  margin-right: 850px;
+  font-style: italic;
+}
+
+.gridCol1 button {
+  margin-top: 150px;
+}
+
+.section {
+  margin: 10px 30px;
+  padding: 50px 50px;
+  color: black;
+}
+
+.content {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.contentText {
+  padding: 0.7rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.h2 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  transition: all 0.4s;
+  border-bottom: 4px solid transparent;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.h2 span {
+  margin-left: 15px;
+  font-size: 3.2rem;
+  transition: all 0.4s;
+}
+
+.h2:hover {
+  color: var(--midnight);
+  border-bottom: 4px solid var(--midnight);
+}
+
+.h2:hover span {
+  margin-left: 25px;
+}
+
+.contentText p {
+  font-size: 1.8rem;
+}
