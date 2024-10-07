@@ -2,9 +2,19 @@ import styles from "./Home.module.css";
 import Button from "../../components/UI/button/Button";
 import { useNavigate } from "react-router-dom";
 import CategoryCarousel from "../../components/home/categoryCarousel/CategoryCarousel";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCategories } from "../../store/features/menuSlice";
 
 function Home() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const { categories, isLoading, error } = useSelector((state) => state.menu);
+
+  useEffect(() => {
+    dispatch(fetchCategories());
+  }, [dispatch]);
 
   const handleClick = (path) => {
     navigate(`/${path}`);
@@ -58,7 +68,25 @@ function Home() {
         <h2 className={styles.h2} onClick={() => handleClick("menu")}>
           Our Products <span> ➜ </span>
         </h2>
-        <CategoryCarousel />
+        {isLoading && <h3>Loading...</h3>}
+
+        {error && (
+          <h3>
+            An error occurred during fetching categories, please try again.
+            <br />
+            {error}
+          </h3>
+        )}
+
+        {!isLoading &&
+          !error &&
+          Array.isArray(categories) &&
+          categories.length === 0 && <h3>No categories available.</h3>}
+
+        {!isLoading &&
+          !error &&
+          Array.isArray(categories) &&
+          categories.length > 0 && <CategoryCarousel categories={categories} />}
       </section>
     </div>
   );
