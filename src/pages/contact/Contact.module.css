@@ -1,0 +1,65 @@
+.contacts {
+  padding: 180px 50px 70px 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  color: var(--midnight);
+}
+
+.contactInfo {
+  font-size: 2rem;
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contactDetails {
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto;
+  margin-top: 20px;
+  gap: 25px;
+}
+
+.contactInfo h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.detailBlock {
+  background: #ffffff;
+  border-bottom: 3px solid var(--midnight);
+  padding: 5% 0;
+  border-radius: 20px;
+  box-shadow: 0 6px 8px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.detailBlock p {
+  font-size: 1.2rem;
+  color: rgb(66, 66, 66);
+}
+
+.detailBlock h2 {
+  margin-bottom: 12px;
+}
+
+.mapSection {
+  grid-column: 2;
+  font-size: 1.6rem;
+}
+
+.mapSection h2 {
+  margin-bottom: 15px;
+}
+
+.mapContainer {
+  width: 100%;
+  height: 93%;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  z-index: 0;
+}

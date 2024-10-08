@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { db } from "../../firebase/firebaseConfig";
-import { ref, get } from "firebase/database"; // Use `get` instead of `onValue`
+import { ref, get } from "firebase/database";
 
 const initialState = {
   categories: [],
@@ -8,7 +8,6 @@ const initialState = {
   error: null,
 };
 
-// Thunk to fetch categories asynchronously
 export const fetchCategories = createAsyncThunk(
   "menu/fetchCategories",
   async () => {
@@ -24,7 +23,7 @@ export const fetchCategories = createAsyncThunk(
           imageUrl: value["image-url"],
           subtitle: value.subtitle,
         }));
-        return categories; // Return the categories
+        return categories;
       } else {
         return "No data available at the specified path.";
       }
