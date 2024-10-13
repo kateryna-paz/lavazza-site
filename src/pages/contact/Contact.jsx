@@ -3,6 +3,7 @@ import styles from "./Contact.module.css";
 import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
 import { useEffect } from "react";
 import { fetchShops } from "../../store/features/shopsSlice";
+import Loader from "../../components/UI/loader/Loader";
 
 function Contact() {
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ function Contact() {
 
       <section className={styles.mapSection}>
         <h2>Our Shops</h2>
+        {isLoading && <Loader />}
         {!isLoading && !error && shops && shops.length > 0 && (
           <MapContainer
             center={[47.8464561, 35.1492677]}

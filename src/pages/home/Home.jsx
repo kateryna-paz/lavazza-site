@@ -5,6 +5,7 @@ import CategoryCarousel from "../../components/home/categoryCarousel/CategoryCar
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCategories } from "../../store/features/menuSlice";
+import Loader from "../../components/UI/loader/Loader";
 
 function Home() {
   const navigate = useNavigate();
@@ -68,7 +69,7 @@ function Home() {
         <h2 className={styles.h2} onClick={() => handleClick("menu")}>
           Our Products <span> ➜ </span>
         </h2>
-        {isLoading && <h3>Loading...</h3>}
+        {isLoading && <Loader />}
 
         {error && (
           <h3>

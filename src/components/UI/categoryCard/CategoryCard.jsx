@@ -14,7 +14,7 @@ function CategoryCard({ image, name, subtitle, category, margin }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/categories/${category}`);
+    navigate(`/menu/${category}`);
   };
 
   return (

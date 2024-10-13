@@ -3,6 +3,7 @@ import styles from "./Menu.module.css";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCategories } from "../../store/features/menuSlice";
+import Loader from "../../components/UI/loader/Loader";
 
 function Menu() {
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ function Menu() {
   return (
     <div className={styles.menu}>
       <h1>Categories</h1>
-      {isLoading && <h3>Loading...</h3>}
+      {isLoading && <Loader />}
 
       {error && (
         <h3>

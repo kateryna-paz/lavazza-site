@@ -3,6 +3,7 @@ import Home from "../pages/home/Home";
 import Menu from "../pages/menu/Menu";
 import About from "../pages/about/About";
 import Contact from "../pages/contact/Contact";
+import CategoryPage from "../pages/categoryPage/CategoryPage";
 
 function AppRoutes() {
   return (
@@ -11,6 +12,7 @@ function AppRoutes() {
       <Route path="/menu" element={<Menu />} />
       <Route path="/about" element={<About />} />
       <Route path="/contacts" element={<Contact />} />
+      <Route path="/menu/:category" element={<CategoryPage />} />
     </Routes>
   );
 }
